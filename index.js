@@ -12,3 +12,14 @@ function evenCounter(arr){
 
 //test
 console.log(evenCounter([1,2,3,4,6])); //3
+
+//Q2.Sum of Prices
+function sumPrices(arr){
+    let total=0;
+    for(let i=0;i<arr.length;i++){
+        total+=arr[i];
+    }
+    return total;
+}
+//test
+console.log(sumPrices([100,200,50]));//350
