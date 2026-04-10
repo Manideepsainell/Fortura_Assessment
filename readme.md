@@ -6,6 +6,7 @@
 - Password Attempts
 - Print Pattern
 - Reverse Array
+- Find Max
 
 
 ## How to Run

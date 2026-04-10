@@ -1,5 +1,5 @@
 const readline=require("readline");
-const question = 5; // change this to run specific question
+const question = 6; // change this to run specific question
 const rl=readline.createInterface({
     input:process.stdin,
     output:process.stdout
@@ -73,6 +73,21 @@ function reverseArray(arr){
     }
     return result;
 }
+
+//Q6.Find Max
+function findMax(arr){
+    if(arr.length===0) return null;
+
+    let max=arr[0];
+
+    for(let i=1;i<arr.length;i++){
+        if(arr[i]>max){
+            max=arr[i];
+        }
+    }
+    return max;
+
+}
 if (question === 1) {
     console.log(evenCounter([1,2,3,4,6]));
 }
@@ -87,4 +102,7 @@ else if (question === 4) {
 }
 else if(question ===5){
     console.log(reverseArray([1, 2, 3, 4]));
+}
+else if(question===6){
+    console.log(findMax([10,5,20,8]));
 }
