@@ -5,7 +5,7 @@
 - Sum of Prices
 - Password Attempts
 - Print Pattern
-
+- Reverse Array
 
 
 ## How to Run

@@ -1,5 +1,5 @@
 const readline=require("readline");
-const question = 3; // change this to run specific question
+const question = 5; // change this to run specific question
 const rl=readline.createInterface({
     input:process.stdin,
     output:process.stdout
@@ -63,6 +63,16 @@ function printPattern(){
         console.log(row);
     }
 }
+
+//Q5.Reverse Array
+function reverseArray(arr){
+    let result=[];
+
+    for(let i=arr.length-1;i>=0;i--){
+        result.push(arr[i]);
+    }
+    return result;
+}
 if (question === 1) {
     console.log(evenCounter([1,2,3,4,6]));
 }
@@ -74,4 +84,7 @@ else if (question === 3) {
 }
 else if (question === 4) {
     printPattern();
+}
+else if(question ===5){
+    console.log(reverseArray([1, 2, 3, 4]));
 }
