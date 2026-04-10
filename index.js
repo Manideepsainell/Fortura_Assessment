@@ -1,5 +1,5 @@
 const readline=require("readline");
-
+const question = 3; // change this to run specific question
 const rl=readline.createInterface({
     input:process.stdin,
     output:process.stdout
@@ -17,8 +17,6 @@ function evenCounter(arr){
     return count;
 }
 
-//test
-console.log(evenCounter([1,2,3,4,6])); //3
 
 //Q2.Sum of Prices
 function sumPrices(arr){
@@ -28,8 +26,6 @@ function sumPrices(arr){
     }
     return total;
 }
-//test
-console.log(sumPrices([100,200,50]));//350
 
 //Q3.Password Attempts
 function passwordAttempts(correctPassword){
@@ -55,4 +51,27 @@ function passwordAttempts(correctPassword){
     }
     askPassword();
 }
-passwordAttempts("admin124");
+
+//Q4.Print Pattern
+function printPattern(){
+    for(let i=1;i<=5;i++){
+        let row="";
+
+        for(let j=1;j<=i;j++){
+            row+="*";
+        }
+        console.log(row);
+    }
+}
+if (question === 1) {
+    console.log(evenCounter([1,2,3,4,6]));
+}
+else if (question === 2) {
+    console.log(sumPrices([100,200,50]));
+}
+else if (question === 3) {
+    passwordAttempts("admin123");
+}
+else if (question === 4) {
+    printPattern();
+}
