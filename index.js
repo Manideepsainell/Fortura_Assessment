@@ -1,5 +1,5 @@
 const readline=require("readline");
-const question = 7; // change this to run specific question
+const question = 8; // change this to run specific question
 const rl=readline.createInterface({
     input:process.stdin,
     output:process.stdout
@@ -104,6 +104,11 @@ function shoppingCart(prices) {
 
     return Math.round(total);
 }
+//Q8.Student Marks Average
+function averageMarks(arr) {
+    if (arr.length === 0) return 0;
+    return sumPrices(arr) / arr.length;
+}
 
 if (question === 1) {
     console.log(evenCounter([1,2,3,4,6]));
@@ -125,4 +130,7 @@ else if(question===6){
 }
 else if(question==7){
     console.log(shoppingCart([50, 120, 200])); 
+}
+else if (question === 8) {
+    console.log(averageMarks([80, 90, 100]));
 }

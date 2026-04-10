@@ -7,6 +7,9 @@
 - Print Pattern
 - Reverse Array
 - Find Max
+- Shopping Cart
+- Student Marks Average
+
 
 
 ## How to Run
