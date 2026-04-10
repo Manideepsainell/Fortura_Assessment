@@ -1,5 +1,5 @@
 const readline=require("readline");
-const question = 8; // change this to run specific question
+const question = 9; // change this to run specific question
 const rl=readline.createInterface({
     input:process.stdin,
     output:process.stdout
@@ -88,7 +88,7 @@ function findMax(arr){
     return max;
 
 }
-//Q6.Shopping Cart with Discount
+//Q7.Shopping Cart with Discount
 function shoppingCart(prices) {
     let total = 0;
 
@@ -109,6 +109,16 @@ function averageMarks(arr) {
     if (arr.length === 0) return 0;
     return sumPrices(arr) / arr.length;
 }
+//Q9.Frequency Counter
+function frequencyCounter(arr) {
+    let freq = {};
+
+    for (let num of arr) {
+        freq[num] = (freq[num] || 0) + 1;
+    }
+
+    return freq;
+}
 
 if (question === 1) {
     console.log(evenCounter([1,2,3,4,6]));
@@ -122,15 +132,18 @@ else if (question === 3) {
 else if (question === 4) {
     printPattern();
 }
-else if(question ===5){
+else if(question === 5){
     console.log(reverseArray([1, 2, 3, 4]));
 }
-else if(question===6){
+else if(question === 6){
     console.log(findMax([10,5,20,8]));
 }
-else if(question==7){
+else if(question=== 7){
     console.log(shoppingCart([50, 120, 200])); 
 }
 else if (question === 8) {
     console.log(averageMarks([80, 90, 100]));
+}
+else if(question === 9){
+    console.log(frequencyCounter([1, 2, 2, 3, 1, 1]));
 }

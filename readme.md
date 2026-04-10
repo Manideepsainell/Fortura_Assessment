@@ -9,7 +9,7 @@
 - Find Max
 - Shopping Cart
 - Student Marks Average
-
+- Frequency Counter
 
 
 ## How to Run
