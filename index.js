@@ -1,3 +1,10 @@
+const readline=require("readline");
+
+const rl=readline.createInterface({
+    input:process.stdin,
+    output:process.stdout
+});
+
 //Q1.Even Counter
 function evenCounter(arr){
     let count=0;
@@ -23,3 +30,29 @@ function sumPrices(arr){
 }
 //test
 console.log(sumPrices([100,200,50]));//350
+
+//Q3.Password Attempts
+function passwordAttempts(correctPassword){
+    let attempts=0;
+
+    function askPassword(){
+        if(attempts === 3){
+            console.log("Access Denied");
+            rl.close();
+            return;
+        }
+        rl.question("Enter password: ",(input)=>{
+            if(input === correctPassword){
+                console.log("Access Granted");
+                rl.close();
+            }
+            else{
+                attempts++;
+                console.log("Wrong password");
+                askPassword();
+            }
+        });
+    }
+    askPassword();
+}
+passwordAttempts("admin124");
