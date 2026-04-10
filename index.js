@@ -1,5 +1,5 @@
 const readline=require("readline");
-const question = 6; // change this to run specific question
+const question = 7; // change this to run specific question
 const rl=readline.createInterface({
     input:process.stdin,
     output:process.stdout
@@ -88,6 +88,23 @@ function findMax(arr){
     return max;
 
 }
+//Q6.Shopping Cart with Discount
+function shoppingCart(prices) {
+    let total = 0;
+
+    for (let i = 0; i < prices.length; i++) {
+        let price = prices[i];
+
+        if (price > 100) {
+            price = price - (price * 0.10); // 10% discount
+        }
+
+        total += price;
+    }
+
+    return Math.round(total);
+}
+
 if (question === 1) {
     console.log(evenCounter([1,2,3,4,6]));
 }
@@ -105,4 +122,7 @@ else if(question ===5){
 }
 else if(question===6){
     console.log(findMax([10,5,20,8]));
+}
+else if(question==7){
+    console.log(shoppingCart([50, 120, 200])); 
 }
